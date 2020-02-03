@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
  def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to action :new
+      redirect_to action: :new
     else
       render action: 'new'      
     end
