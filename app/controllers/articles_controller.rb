@@ -16,9 +16,9 @@ class ArticlesController < ApplicationController
  def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to action: :new
+      redirect_to @article # прерывает запрос и возвращает в браузер редирект команду на определенную страницу и браузер следующим запросом эту страницу получает
     else
-      render action: 'new'      
+      render action: 'new'   # render не прерывает запрос текущий, а продолжает его дальше   
     end
 
   end
