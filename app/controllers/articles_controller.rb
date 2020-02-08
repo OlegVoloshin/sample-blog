@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
     #redirect_to action :index #(так тоже можно)
   end
 
-  private
+  private  #защита от хакинга
 
   def article_params
     params.require(:article).permit(:title, :text)
