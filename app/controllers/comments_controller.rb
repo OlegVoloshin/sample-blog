@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
    private  #от хакинга
 
   def comment_params
-    params.require(:comment).permit(:author, :body)
+    params.require(:comment).permit(:autor, :body)
   end
 
 
