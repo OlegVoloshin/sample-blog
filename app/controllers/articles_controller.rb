@@ -48,8 +48,8 @@ class ArticlesController < ApplicationController
 
   private  #защита от хакинга
 
-  def article_params
-    params.require(:article).permit(:title, :text)
+  def article_params # возвращает список обьектов
+    params.require(:article).permit(:title, :text)# конфигурация этих обьектов
   end
 
 end
