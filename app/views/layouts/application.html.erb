@@ -11,7 +11,7 @@
 
   <body>
     <% if user_signed_in? %>
-        <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
+        <%= current_user.email %> | <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
     <% esle %>
 
       <%= link_to 'Sing In', new_user_session_path %>
