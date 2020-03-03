@@ -1,13 +1,13 @@
-<h1>New article</h1>
+<h1>New article</h1></br>
 
 <%= form_for :article, url: articles_path do |f| %>
 	<p>
-		<%= f.label :title %><br/>
-		<%= f.text_field :title %>
+		<h4><%= f.label :title %></h4>
+		<%= f.text_field :title, class: "form-control", placeholder: "Article's name", style: "width: 400px"%>
 	</p>
 	<p>
-		<%= f.label :text %><br/>
-		<%= f.text_area :text %>
+		<h4><%= f.label :text %></h4>
+		<%= f.text_area :text , class: "form-control", placeholder: "Text input", style: "width: 800px" %>
 	</p>
 
 	<p>

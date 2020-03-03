@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     @article.destroy
 
     redirect_to articles_path
-    #redirect_to action :index #(так тоже можно)
+    #redirect_to action: :index #(так тоже можно)
   end
 
   private  #защита от хакинга
