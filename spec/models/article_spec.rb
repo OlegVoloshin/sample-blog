@@ -12,6 +12,11 @@ describe Article do
     it {should have_many :comments}
   end
 
+  describe "validate lenght" do
+    it { should validate_length_of(:title).is_at_most(140) }
+    it { should validate_length_of(:text).is_at_most(4000) }
+  end
+
   describe "#subject" do
     it "returns the article title" do
       #создаем обьект хитрым способом
@@ -29,6 +34,5 @@ describe Article do
       expect(article.last_comment.body).to eq "comment body 3"
     end
   end
-
-
 end
+
